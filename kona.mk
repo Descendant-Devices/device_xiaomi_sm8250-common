@@ -88,6 +88,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
 
 PRODUCT_PACKAGES += \
+    audio_amplifier.kona \
     liba2dpoffload \
     libaudiopreprocessing \
     libbatterylistener \
