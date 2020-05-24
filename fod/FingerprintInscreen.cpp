@@ -18,13 +18,6 @@
 
 #define TOUCH_FOD_ENABLE 10
 
-#define BRIGHTNESS_PATH "/sys/class/backlight/panel0-backlight/brightness"
-
-#define DISPPARAM_PATH "/sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/card0-DSI-1/disp_param"
-#define DISPPARAM_HBM_FOD_ON "0x20000"
-#define DISPPARAM_HBM_FOD_OFF "0xE0000"
-#define FINGERPRINT_ERROR_VENDOR 8
-
 namespace vendor {
 namespace lineage {
 namespace biometrics {
@@ -32,15 +25,6 @@ namespace fingerprint {
 namespace inscreen {
 namespace V1_0 {
 namespace implementation {
-
-template <typename T>
-static T get(const std::string& path, const T& def) {
-    std::ifstream file(path);
-    T result;
-
-    file >> result;
-    return file.fail() ? def : result;
-}
 
 FingerprintInscreen::FingerprintInscreen() {
     mTouchFeatureService = ITouchFeature::getService();
@@ -91,17 +75,8 @@ Return<void> FingerprintInscreen::setLongPressEnabled(bool) {
     return Void();
 }
 
-Return<int32_t> FingerprintInscreen::getDimAmount(int32_t) {
-    float alpha;
-    int realBrightness = get(BRIGHTNESS_PATH, 0);
-    if (realBrightness > 9) {
-    alpha = (255 + ((-8.08071) * pow(realBrightness, 0.45)));
-    } else {
-    alpha = (255 + ((-10.08071) * pow(realBrightness, 0.45)));
-    }
-    if(alpha < 0.82)
-    alpha+=0.1;
-    return alpha;
+Return<int32_t> FingerprintInscreen::getDimAmount(int32_t /* brightness */) {
+    return 0;
 }
 
 Return<bool> FingerprintInscreen::shouldBoostBrightness() {
