@@ -310,6 +310,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
+# Power
+PRODUCT_PACKAGES += \
+    libqti-perfd-client
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
