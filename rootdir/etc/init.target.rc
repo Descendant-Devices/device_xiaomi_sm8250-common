@@ -33,6 +33,7 @@ import /vendor/etc/init/init.batteryd.rc
 import /vendor/etc/init/init.mi_thermald.rc
 import /vendor/etc/init/init.charge_logger.rc
 import /vendor/etc/init/init.mishow.ctl.rc
+import /vendor/etc/init/hw/init.qcom.power.rc
 
 on early-init
     write /proc/sys/kernel/sched_boost 1
