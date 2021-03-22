@@ -478,14 +478,6 @@ vendor/lib64/vendor.qti.ims.rcsconfig@2.1.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so
 
-# IO prefetcher
-vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
-vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
-vendor/lib64/libqti-iopd-client.so
-vendor/lib64/libqti-iopd.so
-vendor/lib64/vendor.qti.hardware.iop@1.0.so
-vendor/lib64/vendor.qti.hardware.iop@2.0.so
-
 # IPA firmware
 vendor/etc/init/ipa_fws.rc
 vendor/firmware/ipa_fws.b00
@@ -501,8 +493,8 @@ vendor/firmware/ipa_uc.b02
 vendor/firmware/ipa_uc.elf
 vendor/firmware/ipa_uc.mdt
 
-# IRQ balance
-vendor/bin/msm_irqbalance
+# IRQ balance - from LA.UM.9.12.r1-09000-SMxx50.0
+vendor/bin/msm_irqbalance|c455f306eb91fa3870bddb6ef31833aec60c4f01
 vendor/etc/msm_irqbalance.conf
 
 # Keymaster
@@ -626,7 +618,7 @@ vendor/lib64/libperipheral_client.so
 vendor/lib64/libspcom.so
 
 # Perf - from LA.UM.9.12.r1-09000-SMxx50.0
-vendor/bin/msm_irqbalance|c455f306eb91fa3870bddb6ef31833aec60c4f01
+vendor/lib64/libqti-perfd-client.so|285d3fe70353709709089311025c21af86409b70
 
 # Power-off alarm
 -product/app/PowerOffAlarm/PowerOffAlarm.apk

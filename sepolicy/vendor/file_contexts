@@ -39,6 +39,10 @@
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.motor@1.0-service                                              u:object_r:hal_motor_default_exec:s0
 /vendor/bin/hw/vendor\.xiaomi\.hardware\.touchfeature@1\.0-service                                      u:object_r:hal_touchfeature_default_exec:s0
 
+# Power
+/vendor/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock                     u:object_r:hal_power_stats_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service\.xiaomi_sm8250-libperfmgr                               u:object_r:hal_power_default_exec:s0
+
 # Health
 /sys/devices/platform/soc/884000.i2c/i2c-5/5-0066/power_supply/bq2597x-standalone(/.*)?                                                            u:object_r:sysfs_battery_supply:s0
 /sys/devices/platform/soc/soc:maxim_ds28e16/power_supply/batt_verify(/.*)?                                                                         u:object_r:sysfs_battery_supply:s0
@@ -63,9 +67,6 @@
 
 # Sockets
 /dev/socket/audio_hw_socket                   u:object_r:audio_socket:s0
-
-# Power
-/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.3-service\.kona-libperfmgr                        u:object_r:hal_power_default_exec:s0
 
 # SSR
 /sys/devices(/platform)?/soc/[a-z0-9\.:]+,[a-z0-9\-\_]+/subsys[0-9]+/name         u:object_r:sysfs_ssr:s0
