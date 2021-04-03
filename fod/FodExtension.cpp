@@ -15,11 +15,10 @@
  */
 
 #include <compositionengine/FodExtension.h>
-#include <drm/sde_drm.h>
 
 uint32_t getFodZOrder(uint32_t z, bool touched) {
     if (touched) {
-        z |= FOD_PRESSED_LAYER_ZORDER;
+        z |= 150994948;
     }
     return z;
 }
