@@ -1,3 +1,6 @@
+allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+allow hal_power_default vendor_latency_device:chr_file rw_file_perms;
+
 # Allow hal_power_default to write to dt2w nodes
 allow hal_power_default input_device:dir r_dir_perms;
 allow hal_power_default input_device:chr_file rw_file_perms;
@@ -30,3 +33,5 @@ unix_socket_connect(hal_power_default, vendor_pps, hal_graphics_composer_default
 
 # To get/set powerhal state property
 set_prop(hal_power_default, power_prop)
+set_prop(hal_power_default, vendor_power_prop)
+
