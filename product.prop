@@ -8,3 +8,6 @@ debug.hwui.renderer=skiavk
 # Enable blurs, hidden under dev option
 ro.surface_flinger.supports_background_blur=1
 persist.sys.sf.disable_blurs=1
+
+# Expensive rendering for blurs
+ro.sf.blurs_are_expensive=1
