@@ -35,7 +35,7 @@ void set_variant_props(const variant_info_t variant) {
 
     set_ro_build_prop("fingerprint", "google/redfin/redfin:11/RQ3A.210705.001/7380771:user/release-keys");
     property_override("ro.bootimage.build.fingerprint", "google/redfin/redfin:11/RQ3A.210705.001/7380771:user/release-keys");
-    property_override("ro.build.description", "redfin-user 11 RQ3A.210705.001 7380771 release-key");
+    property_override("ro.build.description", fingerprint_to_description("google/redfin/redfin:11/RQ3A.210705.001/7380771:user/release-keys"));
 
     if (variant.nfc)
         property_override(SKU_PROP, "nfc");
