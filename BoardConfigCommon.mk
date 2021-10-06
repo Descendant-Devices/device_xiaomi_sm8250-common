@@ -95,9 +95,7 @@ TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/config.fs
 
 # Fingerprint
 ifeq ($(TARGET_HAS_FOD),true)
-SOONG_CONFIG_NAMESPACES += XIAOMI_KONA_FOD
-SOONG_CONFIG_XIAOMI_KONA_FOD := POS_X POS_Y SIZE
-TARGET_SURFACEFLINGER_FOD_LIB := //$(COMMON_PATH):libfod_extension.xiaomi_kona
+TARGET_SURFACEFLINGER_UDFPS_LIB := //$(COMMON_PATH):libudfps_extension.xiaomi_kona
 endif
 
 # HIDL
