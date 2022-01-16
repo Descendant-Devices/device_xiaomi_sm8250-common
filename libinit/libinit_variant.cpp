@@ -33,9 +33,9 @@ void set_variant_props(const variant_info_t variant) {
     set_ro_build_prop("marketname", variant.marketname, true);
     set_ro_build_prop("model", variant.model, true);
 
-    set_ro_build_prop("fingerprint", "google/raven/raven:12/SD1A.210817.036/7805805:user/release-keys");
-    property_override("ro.bootimage.build.fingerprint", "google/raven/raven:12/SD1A.210817.036/7805805:user/release-keys");
-    property_override("ro.build.description", fingerprint_to_description("google/raven/raven:12/SD1A.210817.036/7805805:user/release-keys"));
+    set_ro_build_prop("fingerprint", "google/raven/raven:12/SQ1D.220105.007/8030436:user/release-keys");
+    property_override("ro.bootimage.build.fingerprint", "google/raven/raven:12/SQ1D.220105.007/8030436:user/release-keys");
+    property_override("ro.build.description", fingerprint_to_description("google/raven/raven:12/SQ1D.220105.007/8030436:user/release-keys"));
 
     if (variant.nfc)
         property_override(SKU_PROP, "nfc");
