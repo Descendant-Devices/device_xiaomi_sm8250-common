@@ -356,4 +356,7 @@
         <item>0</item> <!-- COLOR_MODE_DEFAULT    -->
         <item>9</item> <!-- COLOR_MODE_DISPLAY_P3 -->
     </integer-array>
+
+    <string name="config_adaptiveChargingSuspendValue">1</string>
+    <string name="config_adaptiveChargingResumeValue">0</string>
 </resources>

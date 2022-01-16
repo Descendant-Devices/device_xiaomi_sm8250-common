@@ -355,6 +355,10 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel
 
+# Adaptive charging
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/adaptivecharging.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/adaptivecharging.xml
+
 # Public libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
