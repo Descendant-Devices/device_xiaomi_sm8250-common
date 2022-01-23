@@ -359,4 +359,7 @@
 
     <string name="config_adaptiveChargingSuspendValue">1</string>
     <string name="config_adaptiveChargingResumeValue">0</string>
+
+    <!-- Whether the display blanks itself when transition from a doze to a non-doze state -->
+    <bool name="config_displayBlanksAfterDoze">false</bool>
 </resources>
